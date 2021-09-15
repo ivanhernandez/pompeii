@@ -130,6 +130,7 @@ endfunction
 call s:h("Cursor",        {"fg": s:bg, "bg": s:norm}) 
 call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("NormalNC",      {"fg": s:norm, "bg": s:bg_nc})
+call s:h("None",          {"fg": s:norm, "gui": "NONE"})
 " __Root Syntax Highlights__
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 call s:h("Constant",      {"fg": s:constant})
@@ -151,8 +152,8 @@ hi! link Delimiter        Special
 hi! link Directory        Constant
 hi! link Exception        Statement
 hi! link Float            Constant
-hi! link Function         Normal
-hi! link Identifier       Normal
+hi! link Function         None
+hi! link Identifier       None
 hi! link Include          Statement
 hi! link Keyword          Statement
 hi! link Label            Statement
@@ -160,7 +161,7 @@ hi! link Macro            PreProc
 hi! link Noise            Operator         
 hi! link Number           Constant
 hi! link PreCondit        Comment 
-hi! link PreProc          Normal
+hi! link PreProc          None
 hi! link Repeat           Statement
 hi! link SpecialChar      Special
 hi! link SpecialComment   Special
@@ -211,8 +212,10 @@ call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
 call s:h("VertSplit",         {"fg": s:on_screen_nc, "bg": s:bg_nc, "gui": "NONE"})
 call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg, "fg": s:norm})
 
-" __Pmenu__
+" __Popups__
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
+hi! link NormalFloat      PMenu
+hi! link CompeDocumentation NormalFloat
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
@@ -303,6 +306,9 @@ hi link csStorage Statement
 
 " Go Highlighting
 hi link goBuiltins Statement
+hi link goFunctionCall None
+hi link goVarDefs Special
+hi link goVarAssign None
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_build_constraints      = 1
 let g:go_highlight_chan_whitespace_error  = 1
@@ -321,12 +327,12 @@ let g:go_highlight_variable_assignments   = 1
 let g:go_highlight_variable_declarations  = 1
 
 " HTML Highlighting
-hi! link htmlH1 Normal
-hi! link htmlH2 Normal
-hi! link htmlH3 Normal
-hi! link htmlH4 Normal
-hi! link htmlH5 Normal
-hi! link htmlH6 Normal
+hi! link htmlH1 None
+hi! link htmlH2 None
+hi! link htmlH3 None
+hi! link htmlH4 None
+hi! link htmlH5 None
+hi! link htmlH6 None
 hi! link htmlLink Underlined
 hi! link htmlStatement Statement
 hi! link htmlSpecialTagName Constant
@@ -338,8 +344,8 @@ hi link jsBuiltins Statement
 hi link jsFlowTypeKeyword Statement
 hi link jsFlowImportType Statement
 hi link jsFunction Statement
-hi link jsGlobalObjects Normal
-hi link jsGlobalNodeObjects Normal
+hi link jsGlobalObjects None
+hi link jsGlobalNodeObjects None
 
 " Markdown Highlighting
 hi link markdownH1 Statement
