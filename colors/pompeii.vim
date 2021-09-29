@@ -376,6 +376,10 @@ hi link pythonBuiltinFunc Statement
 " exe 'hi rubyClass guifg='s:keyword' gui=bold'
 " exe 'hi rubyNumber guifg='s:const
 
+" Rust Highlighting
+hi link rustModPath None
+hi link rustIdentifier Type
+
 " VimScript Highlighting
 hi link vimParenSep Statement
 hi link vimSep Statement
