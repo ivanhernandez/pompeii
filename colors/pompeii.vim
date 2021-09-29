@@ -133,6 +133,7 @@ call s:h("NormalNC",      {"fg": s:norm, "bg": s:bg_nc})
 call s:h("None",          {"fg": s:norm, "gui": "NONE"})
 " __Root Syntax Highlights__
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
+call s:h("SpecialComment",{"fg": s:comment, "gui": "italic"})
 call s:h("Constant",      {"fg": s:constant})
 call s:h("Operator",      {"fg": s:norm_subtle, "gui": "NONE"})
 call s:h("TitleRef",      {"fg": s:constant, "gui": "underline"})
@@ -164,7 +165,7 @@ hi! link PreCondit        Comment
 hi! link PreProc          None
 hi! link Repeat           Statement
 hi! link SpecialChar      Special
-hi! link SpecialComment   Special
+hi! link SpecialComment   SpecialComment
 hi! link SpecialKey       Special
 hi! link StorageClass     Type
 hi! link String           Constant
