@@ -70,6 +70,10 @@ if &background == "dark"
   let s:warning          = s:light_yellow
   let s:error            = s:light_red
   let s:change           = s:light_yellow
+  let s:diff_add         = { "gui": "#105020", "cterm": "2" }
+  let s:diff_delete      = { "gui": "#502030", "cterm": "1" }
+  let s:diff_change      = { "gui": "#203050", "cterm": "5" }
+  let s:diff_text        = { "gui": "#703070", "cterm": "1" }
 else
   let s:bg               = s:white
   let s:bg_nc            = s:lighter_gray
@@ -90,6 +94,10 @@ else
   let s:warning          = s:orange
   let s:error            = s:dark_red
   let s:change           = s:dark_yellow
+  let s:diff_add         = { "gui": "#D0F0C8", "cterm": "2" }
+  let s:diff_delete      = { "gui": "#F0D0DA", "cterm": "1" }
+  let s:diff_change      = { "gui": "#D0DAE0", "cterm": "5" }
+  let s:diff_text        = { "gui": "#EDADE0", "cterm": "1" }
 endif
 
 unlet s:black
@@ -237,10 +245,10 @@ call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
 
 
 " Diffs
-call s:h("DiffAdd",       {"fg": s:ok})
-call s:h("DiffDelete",    {"fg": s:error})
-call s:h("DiffChange",    {"fg": s:change})
-call s:h("DiffText",      {"fg": s:constant})
+call s:h("DiffAdd",       {"bg": s:diff_add})
+call s:h("DiffDelete",    {"bg": s:diff_delete})
+call s:h("DiffChange",    {"bg": s:diff_change})
+call s:h("DiffText",      {"bg": s:diff_text})
 hi link diffRemoved       DiffDelete
 hi link diffAdded         DiffAdd
 
