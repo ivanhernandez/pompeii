@@ -394,10 +394,12 @@ hi link vimParenSep Statement
 hi link vimSep Statement
 
 " XML Highlighting
-hi link xmlTag Constant
-hi link xmlTagName xmlTag
+hi link xmlProcessing Special
+hi link xmlTag Identifier
+hi link xmlTagName Keyword
 hi link xmlEndTag xmlTag
 hi link xmlAttrib xmlTag
+hi link xmlString Constant
 
 " YAML Highlighting
 hi link yamlBlockMappingKey Statement
