@@ -30,6 +30,7 @@ let g:colors_name='vesuvius'
 
 let s:bright_black    = { "gui": "#000000", "cterm": "0"   }
 let s:black           = { "gui": "#242424", "cterm": "0"   }
+let s:dark_gray     = { "gui": "#666666", "cterm": "243" }
 let s:medium_gray     = { "gui": "#888888", "cterm": "243" }
 let s:light_gray      = { "gui": "#CCCCCC", "cterm": "249" }
 let s:white           = { "gui": "#DDDDDD", "cterm": "15"  }
@@ -55,7 +56,7 @@ if &background == "dark"
   let s:norm             = s:light_gray
   let s:norm_subtle      = s:medium_gray
   let s:visual           = s:dark_blue
-  let s:cursor_line      = s:dark_gray
+  let s:cursor_line      = s:bright_black
   let s:constant         = s:light_blue
   let s:comment          = s:medium_gray
   let s:comment_em       = s:light_gray
