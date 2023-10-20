@@ -1,5 +1,5 @@
 " Name:       vesuvius.vim
-" Version:    0.3
+" Version:    0.5
 " Maintainer: github.com/ivanhernandez
 " License:    The MIT License (MIT)
 "
@@ -70,10 +70,10 @@ if &background == "dark"
   let s:warning          = s:light_yellow
   let s:error            = s:light_red
   let s:change           = s:light_yellow
-  let s:diff_add         = { "gui": "#105020", "cterm": "2" }
-  let s:diff_delete      = { "gui": "#502030", "cterm": "1" }
-  let s:diff_change      = { "gui": "#203050", "cterm": "5" }
-  let s:diff_text        = { "gui": "#703070", "cterm": "1" }
+  let s:diff_add         = { "gui": "#344A38", "cterm": "2" }
+  let s:diff_delete      = { "gui": "#4A3438", "cterm": "1" }
+  let s:diff_change      = { "gui": "#384058", "cterm": "5" }
+  let s:diff_text        = { "gui": "#503858", "cterm": "1" }
 else
   let s:bg               = s:white
   let s:bg_nc            = s:white
@@ -94,10 +94,10 @@ else
   let s:warning          = s:orange
   let s:error            = s:dark_red
   let s:change           = s:dark_yellow
-  let s:diff_add         = { "gui": "#D0F0C8", "cterm": "2" }
-  let s:diff_delete      = { "gui": "#F0D0DA", "cterm": "1" }
-  let s:diff_change      = { "gui": "#D0DAE0", "cterm": "5" }
-  let s:diff_text        = { "gui": "#EDADE0", "cterm": "1" }
+  let s:diff_add         = { "gui": "#C0DAC8", "cterm": "2" }
+  let s:diff_delete      = { "gui": "#DAC0C8", "cterm": "1" }
+  let s:diff_change      = { "gui": "#C0C8DA", "cterm": "5" }
+  let s:diff_text        = { "gui": "#CAC0E0", "cterm": "1" }
 endif
 
 " Neovim Terminal Mode

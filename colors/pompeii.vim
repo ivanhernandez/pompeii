@@ -1,5 +1,5 @@
 " Name:       pompeii.vim
-" Version:    0.2
+" Version:    0.5
 " Maintainer: github.com/ivanhernandez
 " License:    The MIT License (MIT)
 "
